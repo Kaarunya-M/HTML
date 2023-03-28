@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 10px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 25%;
+}
+
+@media only screen and (max-width: 900px) {
+  .responsive {
+    width: 50%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align: center;color: brown;font-style: oblique;"> Image Gallery</h2>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="images/ngo2.jpg">
+      <img src="images/ngo2.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">NGO Categories</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="images/ngo1.jpg">
+      <img src="images/ngo1.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Communicative</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="images/ng03.jpg">
+      <img src="images/ng03.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Skill development</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="images/ngo4.jpg">
+      <img src="images/ngo4.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Unity in Diversity</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+    <p style="text-indent: 30px;">Woman animators can play more effective role in organising women SHGs. The animator cannot 
+        organise the groups all alone. He or she will need guidance, training, reading material, etc.</p>
+    
+    <p>Usually, one of the following agencies help:</p>
+        
+        <p>- A voluntary agency or Non Governmental Organization (NGO).</p>
+        <p>- The development department of the State Government.</p>
+        <p>- The local branch of a bank.</p>
+</div>
+
+</body>
+</html>
+
+

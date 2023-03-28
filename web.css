@@ -1,0 +1,76 @@
+.art{
+    color: cadetblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: center;
+    border-style: dashed double;
+    border-color:grey green red blue; 
+    background-color:honeydew;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px palevioletred;
+    
+}
+#art{
+    color:blanchedalmond;
+    font-style: italic;
+    font-size: larger;
+    text-transform: capitalize;
+    text-indent: 30px;
+    font-variant: small-caps;
+    border:5px solid powderblue;
+    position: sticky;
+    top: 0;
+}
+
+    
+div{
+    width: auto;
+    height: 100px;
+    margin: 100 px;
+    color: lightcyan;
+    border: 20px double lightgreen;
+    padding: 50px;
+    font-size: large;
+    background-color: rgb(179, 155, 206);
+    opacity: 0.8;
+    outline: 10px whitesmoke ridge;
+    text-align: justify;
+    letter-spacing: 2px;
+    text-decoration: underline blueviolet dotted;
+}
+div:hover{
+    background-color: transparent;
+    text-decoration: none;
+}
+p{
+    display: none;
+    background-color: lightpink;
+    text-transform: uppercase;
+    font-style: italic;
+    padding:10px;
+}
+div:hover p{
+    display: block;
+}
+img:hover{
+    transform: scale(1.5);
+    margin-left: auto;
+    margin-right: auto;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    color:red;
+    text-decoration: none;
+}
+a:hover{
+    color:cyan;
+    text-decoration: underline;
+    font-size: larger;
+}
+a:active{
+    text-decoration: double;
+    color:darksalmon;
+}

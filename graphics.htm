@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="grap" height="500" width="500" style="border:1px solid black;"></canvas>
+        <p><button onclick="mygrap()">Click me </button></p>
+        <img src="images/wp.jpg" id="wp" alt="Workplace" width="50" height="50">
+        <script>
+            function mygrap(){
+            var a = document.getElementById("grap");
+            var txt=a.getContext("2d");
+            var img=document.getElementById("wp");
+            txt.drawImage(img,10,10);
+            }
+        </script>
+    </body>
+</html>
+

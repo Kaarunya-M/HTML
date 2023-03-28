@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Icons</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>
+            a:visited{
+                color:red;
+            }
+            a:hover{
+                color:green;
+            }
+            #content, .flip{
+                text-align: center;
+                color: aquamarine;
+                font-size: large;
+                background-color: brown;
+                padding: 15px;
+                border: 2px solid white;
+                margin: auto;
+                
+            }
+            #content{
+                display: none;
+            }
+            .pos{
+                position: relative;
+            }
+            .left{
+                position: absolute;
+                color:crimson;
+                font-size: larger;
+                top: 20px;
+                left: 20px;
+                text-transform: uppercase;
+            }
+            img{
+                border: 5px solid blue;
+                width: 30%;
+                height: auto;
+                opacity: 0.5;
+            }
+            img:hover{
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+
+            <img src="images/layout.jpg" alt="css" >
+             <div class="left">CSS</div>
+          </div>
+          <br><br>
+
+        <p>Some Google icons:</p>
+<i class="material-icons">cloud</i>
+<i class="material-icons" style="color:red">favorite</i>
+<i class="material-icons">attachment</i>
+<i class="material-icons">computer</i>
+<i class="material-icons">traffic</i>
+<br><br>
+
+<a href="https://ai.google/" target="_blank">Google AI</a>
+<br><br>
+
+
+
+<p class="flip" onclick="mycontent()" style="position: sticky; top:0; padding: 10px;">Click here to view the full content</p>
+<div id="content" style="padding-bottom: 1000px;">
+    <p>
+        Artificial intelligence (AI) is intelligence—perceiving, synthesizing,
+        and inferring information—demonstrated by machines, 
+        as opposed to intelligence displayed by non-human animals and humans.
+        Example tasks in which this is done include speech recognition, computer vision, 
+        translation between (natural) languages, as well as other mappings of inputs.
+    </p>
+</div>
+<script>
+    function mycontent(){
+        document.getElementById("content").style.display="block";
+    }
+</script>
+    </body>
+</html>

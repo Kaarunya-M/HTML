@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Basic js</title>
+    <script>
+        function basic(){
+            document.getElementById("demo").innerHTML="Welcome to JS!!";
+            document.getElementById("demo").style.fontSize="40px";
+            document.getElementById("demo").style.color="violet";
+            document.getElementById("demo").style.fontStyle="italic";
+            alert('Hi Kaarunya! Have a great day!!  Press "OK" to continue your path.');
+        }
+        let txt1="Savings first ";
+        txt1 +=" — Credit later";
+    // DATATYPES
+        function example(){
+        let x = 18+26;
+        let y = "Javascript";
+        let z = 456e4, a = 5679e-5;
+        const fruit = [" Apple", " Orange", " Cherry"];
+        fruit.push(" Mango");
+        const stat1={
+            fullname: function(){
+            return this.frst + " " + this.sec;
+           }
+        }
+        const stat2={
+            frst:"Hi! ", 
+            sec:"Welcome to JS."
+        }
+        document.getElementById("example").innerHTML="Data Types:" + "<br><br>" + y +" "+ x + "<br>" + y +" "+
+           18+26 + "<br><br>" + "Exponential : " + "<br>" + z + "<br>" + a + "<br><br>"+ "Sort : " + fruit.sort() + "<br>" + "Reverse sort : " + fruit.reverse() 
+           + "<br><br>"+ "Concatenation: " + stat1.fullname.apply(stat2);        
+       // document.getElementById("example").innerHTML=y +" "+ 18+26;
+        }
+        function multi(p1,p2){
+            return p1 * p2;
+        }
+        //STRING REPLACE
+        function rep(){
+            let txt=document.getElementById("rep").innerHTML;
+            let newtxt=document.getElementById("rep").innerHTML=txt.replace(/HTML/g,"JAVASCRIPT");
+        }
+        let sen="Visit HTML and become expert in creating web page using HTML";
+        //Arrow
+        let hello = "";
+        hello = val => "Hello" + val;
+        //Mouse events
+        var s=document.getElementById("mybtn");
+        s.addEventListener("mouseover", fun1);
+        s.addEventListener("click",fun2);
+        s.addEventListener("mouseout",fun3);
+        function fun1(){
+            document.getElementById("model").innerHTML += "Hi!!<br>";
+        }
+        function fun2(){
+            document.getElementById("model").innerHTML += "Welcome!<br>";
+        }
+        function fun3(){
+            document.getElementById("model").innerHTML += "Bye!!<br>";
+        }
+    </script>
+</head>
+<body style="background-color: bisque;text-align: center;">
+    <h2 onclick ="this.innerHTML='Advanced JS'" style="text-align: center;color: darkmagenta;">Basic JS</h2>
+    <p>JavaScript is the world's most popular programming language.</p>
+    <p>JavaScript is the programming language of the Web.</p>
+    <p id="demo"></p>
+    <button type="button" onclick="basic()">Click Me</button>
+    <p id="demo1"></p>
+     <button type="button" onclick='document.getElementById("demo1").innerHTML="Sum = " + (10+5)*4 + "."'>Math</button>
+    <button onclick='document.getElementById("para").innerHTML=txt1'>Concat</button>
+    <p id="para" ></p>
+    <button type="button" onclick="example()">Examples</button>
+    <p id="example"></p>
+    <button type="button" onclick="document.getElementById('multi').innerHTML=multi(5,6)">Functions</button>
+    <p id="multi"></p>
+    <button onclick="rep()">Replace</button>
+    <P id="rep">Visit HTML and become expert in creating web page using HTML.</P>
+    <button onclick='document.getElementById("sen").innerHTML="Index : " + sen.lastIndexOf("HTML") + "<br>" +"The word available: " + sen.includes("web")'>Search</button>
+    <p id="sen"></p>
+     <!--remove using this-->
+     <p id="hel"></p>
+    <button id="mybtn">Try this</button>
+    <p id="model"></p>
+    <button onclick="document.getElementById('hello').innerHTML=hello(' Universe')">Arrow Function</button>
+    <button onclick="this.style.display='none'">Remove</button>
+    <button onclick="window.print()">Print</button>
+
+    </body>
+</html>

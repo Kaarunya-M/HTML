@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <code>
+        a=5;
+        b=9;
+    </code><br>
+    <button onclick="myfunction()"> Click me</button>
+    <script>
+        function myfunction(){
+            alert("You have entered the computercode.");
+        }
+    </script><br><br>
+<form>
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="pwd">Password: </label>
+    <input type="password" id="pwd" name="pwd" required><br><br>
+
+    
+    <label for="dob">Date of Birth: </label>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <label for="jd">Month & Year of joining: </label>
+    <input type="month" id="jd" name="dob"><br><br>
+
+    <label for="mycolor">Choose a color: </label>
+    <input type="color" id="mycolor" name="mycolor"><br><br>
+
+    <br><br>
+    <input type="checkbox" id="code" value="Alphabet">
+    <label for="code">User input</label>
+
+    <input type="checkbox" id="ml" value="Alphabet">
+    <label for="ml">Machine Language </label><br>
+
+    <input type="radio" id="binary" value="Number">
+    <label for="binary">Male</label>
+    <input type="radio" id="binary" value="Number">
+    <label for="binary">Female</label><br><br>
+    <fieldset>
+        <legend>Input type: </legend><br>
+    <label for="input" >Select the input: </label><br>
+    <select id="input" name="input" size="3" multiple>
+        <option value="binary">Binary</option>
+        <option value="decimal" selected>Decimal</option>
+        <option value="hexadecimal">Hexadecimal</option>
+        <option value="alphabet">Alphabet</option>
+        <option value="alphanumeric">Special characters</option>
+    </select><br><br>
+    <label for="sources">Select the source: </label><br>
+    <input list="sources" name="sources">
+    <datalist id="sources" >
+        <option value="Wikipedia">
+        <option value="Tutorials Point">
+        <option value="Official Page">
+        <option value="Videos">
+        <option value="Images">
+    </datalist><br><br>
+    
+     <label for="myfile">Upload your CV,photo: </label>
+     <input type="file" id="myfile" name="myfile" multiple>
+    <br><br>
+    <input type="submit"  value="Submit" onclick="alert('Submitted successfully!')">
+
+    
+    <input type="reset" value="reset"><!-- reset works only inside the form tag-->
+</fieldset>
+</form>
+<br>
+     
+
+
+        <figure>
+        <img src="images/wp.jpg" alt="workplace image" target="_blank" usemap="#wp">
+        <map name="wp">
+            <area shape="poly" coords="66,300,200,30,404,137,265,400" href="https://en.wikipedia.org/wiki/Tablet_computer" target="_blank">
+            <area shape="poly" coords="87,600,60,485,137,402,244,444,271,558" href="https://mail.google.com/mail/" target="_blank">
+        </map>
+            <textarea name="message" style="width: 500px; height: 500px; float:right;">
+            A workplace is a location where someone works, for their employer or themselves, a place of employment. Such a place can range from a home office to a large office building or factory. For industrialized societies, the workplace is one of the most important social spaces other than the home, constituting "a central concept for several entities: the worker and [their] family, the employing organization, the customers of the organization, and the society as a whole".[1] The development of new communication technologies has led to the development of the virtual workplace and remote work.
+            </textarea>
+        </figure>
+    </body>
+</html>

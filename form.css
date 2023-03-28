@@ -1,0 +1,13 @@
+body{
+background-color:lightgrey;
+text-align: center;
+}
+h1{
+color:blue;
+text-align:center;
+}
+input:focus{
+    background-color: rgb(184, 233, 218);
+    color:brown;
+    border: 2px solid black;
+}

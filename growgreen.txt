@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<title>Grow green</title>
+<body>
+<header>
+<h1 style="font-family:times new roman;text-align:center;background-color:lightgreen;color:black;">Nature Conservative</h1>
+</header>
+<img src="/images/growgreen.jpg" alt="Plant tree saplings" style="padding:50px;width:25%;">
+<blockquote cite="https://www.unicef.org/india/what-we-do/climate-change">
+UNICEF’s climate and environmental sustainability strategy is anchored around four pillars
+ i)   make children as focus on environmental strategies 
+ ii)  reduce emission and pollution 
+ iii) empower children as agents of change
+ iv)  protect children from impacts.
+</blockquote>
+</body>
+</html>

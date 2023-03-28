@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSS Layout</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background-color: rgb(119, 165, 165);
+            }
+            .header{
+                background-color:darkslateblue;
+                background-image: url(images/shg-logo.jpg);
+                background-repeat: no-repeat;
+                color: ghostwhite;
+                text-shadow: 2px 2px 6px lawngreen, 1px 1px 5px rgb(223, 90, 50);
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                text-align: center;
+                padding: 20px;
+                position: sticky;
+                top:0;
+            }
+            .footer{
+                background-color: navy;
+                color: ghostwhite;
+                text-align: center;
+                position: sticky;
+                bottom:0;
+            }
+            /*horizontal nav*/
+            .nav{
+                overflow: hidden;
+                background-color:rgb(148, 175, 224);
+                position: sticky;
+                top:110px;
+            }
+            .nav a {
+               
+                display:inline-block;
+                color: rgb(158, 13, 115);
+                padding: 10px 20px;
+                font-size: large;
+                text-align: center;
+                text-decoration: none;
+            }
+            .nav a:hover{
+                background-color: rgb(235, 171, 134);
+                color:black;
+            }
+              /*sidebar*/
+            .column{
+                float: left;
+                padding: 30px;
+                width: 15%;
+                background-color: rgb(119, 165, 165 0.1);
+                position: sticky;
+                top:160px;
+            }
+        
+            .content{
+                text-align: justify;
+                float:left;
+                width: 65%;
+                padding: 15px;
+                resize: vertical;
+            }
+ /*The content padding*/  
+            .card{
+                background-color: white;
+                padding: 20px;
+                margin-top: 20px;
+            }
+            .clearfix::after{
+                content: "";
+                clear: both;
+                display: table;
+            }
+            
+            .column  ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            
+             li a, .dropbtn{
+               background-color:lavender;
+               color: rgb(65, 31, 94);
+               font-family: 'Times New Roman', Times, serif;
+               font: oblique large  bold;
+               padding: 10px;margin-bottom: 10px; 
+               text-align: center;
+               text-decoration: none;
+               display: block;
+               resize: both;
+            }
+             li a:hover, .dropdown:hover .dropbtn{
+                background-color: rgb(211, 139, 142);
+            }
+            /*Dropdown menu*/
+            
+            li.dropdown{
+                display: block;
+            }
+            .dropdown-cont{
+               display: none;
+               position: relative;
+               min-width: 160px;
+               z-index:1;
+            }
+            .dropdown-cont a {
+                color: black;
+                padding: 12px 15px;
+                text-decoration: none;
+                display: block;
+                text-align: center;
+            }
+            .dropdown-cont a:hover{
+                background-color: lightpink;
+            }
+            .dropdown:hover .dropdown-cont{
+                display: block;
+            }
+
+            .caption{
+                float: right; 
+                margin: 25px 20px 0px 10px; 
+                padding:10px; 
+                text-align: center;
+                font-size: large;
+                position: sticky;
+                top:180px;
+                resize: both;
+            }
+            .caption1{
+                float: right; 
+                margin: 195px 10px 0px 10px; 
+                padding:5px; 
+                text-align: center;
+                resize: both;
+                overflow: hidden;
+            }
+            /*highlight*/
+            .intro::first-letter{
+                color: crimson;
+                font-size:xx-large;
+            }
+            .intro1::first-line{
+                color: green;
+                font-size: large;
+                font-variant:small-caps ;
+            }
+            ::selection{
+                color:fuchsia;
+                background-color:antiquewhite;
+            }
+            /*screen resize*/
+            @media screen and (max-width: 400px) {
+            .content  {
+                        float: none;
+                        width: 100%;
+                   }
+                }
+                   @media screen and (max-width: 800px) {
+            .column , .caption, .caption1 {
+                        float: right;
+                        width: 40%;
+                       }
+                 }
+            /*transform & transition*/
+            .tran{
+                height: 80px;
+                width: 30px;
+                background: aqua;
+                transition: width 3s, height 3s, transform 4s;
+                text-align: center;
+                text-overflow: hidden;
+                position: sticky;
+                top:300px;
+            }
+            .tran:hover {
+                width:200px;
+                height: 220px;
+                color:rgb(179, 82, 166);
+                background-image: url(images/growgreen.jpg);
+                transform: rotate(-360deg);
+                font-variant: small-caps;
+                font-size: larger;
+                
+                }
+            .dis{
+                display: none;
+            }
+            .dis:hover p{
+                visibility: visible;
+                text-align: justify;
+            }
+            .anim{
+                width: 250px;
+                height:250px;
+                background-image: url(images/bg.jpg);
+                animation-name: nature;
+                animation-duration: 8s;
+                text-align: center;
+                font-size:40px;
+                color:rgb(85, 7, 7);
+                animation-fill-mode: both;
+                margin-left: auto;
+                margin-right: auto;
+               
+            }
+            @keyframes nature{
+                from{background-image: url(images/bg.jpg);}
+                to{background-image: url(images/ng03.jpg); width: auto; height: 350px;background-repeat: no-repeat;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Hope Circle</h1>
+        </div>
+        <div class="nav">
+            <a href="css-layout.htm">Home</a>
+            <a href="https://www.iasexpress.net/self-help-groups-shgs/" target="iframe_a">About</a>
+            <a href="https://www.ngofoundation.in/ngo-s-india/make-a-difference-contact-number-contact-details_i57429" target="_blank">Contact</a>
+            <a href="https://wcd.nic.in/sites/default/files/Performing%20%26amp%3Bamp%3B%20Non-Performing%20Dolphin%20Printo%2004042019_4.pdf" target="_blank">List</a>
+        </div>
+        <div class="clearfix">
+            <div class="column">
+        <ul>
+            <li><a href="gallery.html" target="iframe_a">Gallery</a></li>
+            <li><a href="https://www.humanrightscareers.com/issues/what-are-typical-ngo-activities/" target="iframe_a">Activities</a></li>
+            <li><a href="https://www.iasgyan.in/daily-current-affairs/schemes-for-women-through-self-help-groups" target="iframe_a">Schemes</a></li>
+            <li class="dropdown">
+               <a href="javascript:void(0)" class="dropbtn">Sponsers</a>
+            <div class="dropdown-cont">
+                <a href="https://ngosindia.com/the-asia-foundation" target="_blank">Asia Foundation</a>
+                <a href="https://ngosindia.com/childline-india-foundation-cif/" target="_blank">Childline India Foundation</a>
+                <a href="https://ngosindia.com/cry/" target="_blank">CRY (Child Rights and You)</a>
+                <a href="https://ngosindia.com/help-age-india/" target="_blank">Help Age India</a>
+                <a href="https://ngosindia.com/india-development-and-relief-fund/" target="_blank">India Development and Relief Fund</a>
+                <a href="https://ngosindia.com/national-bank-for-agriculture-rural-development-nabard" target="_blank">NABARD</a>
+                <a href="https://ngosindia.com/world-bank" target="_blank">World Bank</a>
+            </div>
+        </li>
+        </ul>
+    </div>
+    <div class=" content">
+        <div class="card">
+           
+            <p class="intro" style="text-indent: 30px;">Self-help Groups (SHGs) are informal associations of people who come together to find ways to improve their 
+            living conditions. They are generally self-governed and peer-controlled.People of similar economic and social
+          backgrounds associate generally with the help of any NGO or government agency and try to resolve their issues, 
+          and improve their living conditions.</p>
+        </div>
+        <div class="card">
+           
+            <p class="intro1">Who helps to form SHGs?<p>
+
+            <p style="text-indent: 30px;">A reasonably educated and helpful local person has to initially help the poor people to form groups.
+            He or She tells them about the benefits of thrift and the advantages of forming groups. This person is 
+        called an ‘animator’ or ‘facilitator’. Usually, the animator is a person who is already known to the community.</p>
+                
+            <p>Any of the following persons can be a successful animator:</p>
+            <p>1.Retired school teacher or a retired government servant, who is well known locally.</p>
+            <p>2. A health worker/a field officer/staff of a development agency or department of the State Government.</p>
+            <p>3. Field officer or a staff member of a commercial bank/regional rural bank or a field staff from the local 
+                co-operative bank or society</p>
+            <p>4. A field level functionary of an NGO.</p>
+            <p>5. An unemployed educated local person, having an inclination to help others.</p>
+            <p>6. A member/participant in the Vikas Volunteer Vahini (VVV) Programme of NABARD.</p><br>
+                
+            <p style="text-indent: 30px;">Woman animators can play more effective role in organising women SHGs. The animator cannot 
+                organise the groups all alone. He or she will need guidance, training, reading material, etc.</p>
+            
+            <p>Usually, one of the following agencies help:</p>
+                
+                <p>- A voluntary agency or Non Governmental Organization (NGO).</p>
+                <p>- The development department of the State Government.</p>
+                <p>- The local branch of a bank.</p>
+        </div>
+        <div class="card">
+            <p class="intro1">What does the animator do?</p>
+
+                <p style="text-indent: 30px;">The animator talks to people in the village or at their homes. 
+                He or she explains the benefits of thrift and group formation.
+                No promise of bank loan is given to anyone. 
+                He or she helps the group members to hold one or two initial meetings.
+                The group finds a group leader, for holding meetings, keeping books, etc.
+                 The animator guides and encourages the leader and the group members.</p>
+        </div>
+        <div class="card">
+            <iframe src=" " name="iframe_a" height="500px" width="100%" title="Iframe Example" 
+            style=" background-image:linear-gradient(to right, rgb(216, 147, 216),orange ,rgb(179, 124, 218), rgb(127, 201, 127) );
+             float:inline-start;border-radius: 25px;margin: 0;padding: 0;">Rainbow</iframe>
+        </div>
+        <div class="anim">
+         <p style="position: relative;">Animation</p>
+        </div>
+    </div>
+    <div class="caption"> <img src="images/shg.jpg" style="height: auto;-webkit-box-reflect: below 30px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));" ><br>Together We Can</div>
+    <div class="caption1">
+        <div class="tran">
+        <h3 style="color:rgb(172, 109, 125);font-weight: bold;font-style: oblique;">Transform & Transition</h3>
+        <div class="dis"><p>It shows the 3D tranformation</p></div>
+    </div>
+</div>
+        
+   </div>
+    <div class="footer">
+        <h3>Together We Can</h3>
+    </div>
+    </body>
+</html>
